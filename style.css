@@ -1,3 +1,11 @@
+body {
+    display: flex;
+    justify-content: center; /* Menengahkan secara horizontal */
+    align-items: center;     /* Menengahkan secara vertikal */
+    min-height: 100vh;       /* Memastikan body mengisi seluruh tinggi layar */
+    margin: 0;               /* Menghilangkan margin default dari browser */
+}
+
 /* Gaya untuk Video Latar Belakang */
 .background-video {
     position: fixed;

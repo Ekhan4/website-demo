@@ -14,6 +14,20 @@ body {
     box-sizing: border-box;
 }
 
+/* Gaya untuk Video Latar Belakang */
+.background-video {
+    position: fixed; /* Tetap di posisi meskipun halaman di-scroll */
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%); /* Trik untuk memusatkan video */
+    z-index: -100; /* Menempatkan video di lapisan paling belakang */
+    object-fit: cover; /* Memastikan video menutupi layar tanpa distorsi */
+}
+
 /* Kontainer utama yang menampung dua kolom */
 .container {
     display: flex;

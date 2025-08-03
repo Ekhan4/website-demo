@@ -1,9 +1,22 @@
+/* Pengaturan dasar untuk fallback background */
 body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    
+    /* Ini adalah latar belakang CADANGAN. 
+      Warna solid #0b7a75 akan muncul pertama kali sebelum video dimuat, 
+      sehingga tidak akan ada kilatan warna putih.
+    */
+    background-color: #0b7a75;
+    background-image: 
+        linear-gradient(315deg, rgba(11, 122, 117, 0.8) 0%, rgba(20, 155, 149, 0.8) 74%), 
+        url('https://www.transparenttextures.com/patterns/clean-gray-paper.png');
+    
+    /* Untuk memusatkan konten di atas video */
     display: flex;
-    justify-content: center; /* Menengahkan secara horizontal */
-    align-items: center;     /* Menengahkan secara vertikal */
-    min-height: 100vh;       /* Memastikan body mengisi seluruh tinggi layar */
-    margin: 0;               /* Menghilangkan margin default dari browser */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 /* Gaya untuk Video Latar Belakang */
@@ -20,20 +33,29 @@ body {
     object-fit: cover; /* Memastikan video menutupi layar */
 }
 
+/* (Opsional) Gaya untuk konten agar terlihat di atas video */
+.content {
+    color: white;
+    text-align: center;
+    /* z-index: 1; agar selalu di depan video */
+}
+
 /* Kontainer utama yang menampung dua kolom */
 .container {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 1000px; 
+    max-width: 1000px; /* Diperpanjang secara horizontal */
     
-    /* PERBAIKAN: Tambahkan titik dua (:) dan gunakan background-color */
-    background-color: #80c4b7; 
+    /* INI PERUBAHANNYA: Mengganti background menjadi warna solid */
+    background: #ccd6d6;
     
     border-radius: 25px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     padding: 50px;
     gap: 50px;
+
+    /* Baris backdrop-filter dan border bisa dihapus karena tidak relevan lagi */
 }
 
 /* Kolom Kiri: Info */
@@ -67,28 +89,32 @@ body {
     object-fit: cover; /* Memastikan video memenuhi kotak tanpa distorsi */
 }
 
+/* Ganti warna-warna di bawah ini agar lebih gelap */
+
 .tagline {
     font-size: 0.9rem;
     font-weight: 600;
-    color: #FF6B6B; /* Warna Coral */
+    /* Ganti dari warna terang seperti coral ke warna gelap */
+    color: #c91b52; /* <-- UBAH KE WARNA INI */
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 .event-title {
     font-family: 'Cinzel', serif;
-    font-size: 3.2rem; /* Font judul diperbesar */
+    font-size: 3.2rem;
     line-height: 1.2;
     margin: 10px 0;
-    color: #1A535C;
+    /* Pastikan warnanya tetap gelap seperti ini */
+    color: #1A535C; /* <-- PASTIKAN WARNA INI */
 }
 
 .master-link-text {
     font-size: 1.2rem;
     font-weight: 400;
-    color: #4ECDC4; /* Warna Teal Muda */
+    /* Ganti juga warna ini agar kontras */
+    color: #1A535C; /* <-- UBAH KE WARNA INI */
 }
-
 /* Kolom Kanan: Links */
 .links-column {
     flex: 1;
@@ -128,3 +154,4 @@ body {
 .btn-template     { background-color: #1A535C; } /* Teal Tua */
 .btn-originality  { background-color: #4f6d7a; } /* Biru Batu */
 .btn-guidebook    { background-color: #7A7265; } /* Coklat Kayu Lapuk */
+

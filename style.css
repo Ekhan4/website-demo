@@ -155,3 +155,25 @@ body {
 .btn-originality  { background-color: #4f6d7a; } /* Biru Batu */
 .btn-guidebook    { background-color: #7A7265; } /* Coklat Kayu Lapuk */
 
+CSS
+
+/* =============================================== */
+/* ATURAN KHUSUS UNTUK TAMPILAN MOBILE (DI BAWAH 768px) */
+/* =============================================== */
+@media (max-width: 768px) {
+    
+    /* 1. Sembunyikan elemen video di layar kecil */
+    .background-video {
+        display: none;
+    }
+
+    /* 2. Ganti latar belakang body dengan gambar yang ringan */
+    body {
+        /* Ganti 'gambar-laut.jpg' dengan nama file gambar Anda */
+        background-image: url('gambar-laut.jpg'); 
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+
